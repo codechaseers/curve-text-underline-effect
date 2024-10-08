@@ -1,0 +1,17 @@
+/* Default class for the underline effect */
+.underline-effect {
+    position: relative;
+    display: inline-block;
+}
+
+.underline-effect::before {
+    content: "";
+    position: absolute;
+    bottom: var(--bottom-offset, -15px);
+    left: 0;
+    height: 7px;
+    width: 100%;
+    border: solid 8px var(--underline-color, rgb(0, 136, 255));
+    border-radius: var(--border-radius, 50%);
+    border-color: var(--underline-color, rgb(44, 109, 222)) transparent transparent transparent;
+}
